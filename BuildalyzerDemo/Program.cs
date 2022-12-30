@@ -5,7 +5,7 @@ public static class Program
 {
     public static void Main(string[] args)
     {
-        var slnFilePath = "/Users/xavierp/Projects/Goatly.NET/GoatlyCore.sln";
+        var slnFilePath = args[0];
         
         var manager = new AnalyzerManager(slnFilePath);
         
