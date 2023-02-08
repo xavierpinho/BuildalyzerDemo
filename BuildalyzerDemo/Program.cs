@@ -9,6 +9,11 @@ public static class Program
         
         var manager = new AnalyzerManager(slnFilePath);
         
+        //With TargetFramework set, the hanging does not occur,
+        //when loading https://github.com/HooliCorp/Goatly.NET
+        
+        //manager.SetGlobalProperty("TargetFramework", "net6");
+        
         foreach (var projectAnalyzer in manager.Projects.Values)
         {
             Console.Write($"Loading project {projectAnalyzer.ProjectFile.Path} ...");
